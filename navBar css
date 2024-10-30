@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #033c79;
+}
+
+nav {
+    background-color: #067c02; /* Cor de fundo da navbar */
+    height: 60px; /* Altura da navbar */
+    width: 100%; /* Largura total */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove a margem da lista */
+    padding: 0; /* Remove o preenchimento,em volta da lista */
+    display: flex; /* Flexbox para distribuição dos itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 5%; /* Faz a lista ocupar a altura da navbar */
+    
+}
+
+nav ul li {
+    margin: 0; /* Remove a margem dos itens da lista */
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px; /* Espaçamento interno dos links */
+    color: white; /* Cor do texto dos links */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-button {
+    padding: 10px 35px; /* Espaçamento interno do botão */
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    text-decoration: none; /* Remove o sublinhado do botão */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+
+.nav-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+nav ul li a:hover {
+    text-decoration:rgb(0, 73, 156) underline; /* Cor ao passar o mouse nos links */
+    height: 10px;
+}
+
