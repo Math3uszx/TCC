@@ -1,34 +1,51 @@
-/* Cabeçalho//NAV BAR */
+/* Reseta as margens e paddings para garantir que não haja conflitos de estilo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo geral do corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #033c79;
+    background-color: #033c79; /* Cor de fundo azul escuro */
+    color: #333; /* Cor do texto */
 }
 
+/* Estilo da barra de navegação */
 nav {
     background-color: #067c02; /* Cor de fundo da navbar */
     height: 80px; /* Altura da navbar */
     width: 100%; /* Largura total */
     position: fixed; /* Fixa a navbar no topo */
-    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
-    top: 0px;
-    margin: 0px;
+    top: 0; /* Posiciona a navbar exatamente no topo */
+    left: 0; /* Garante que ela comece do lado esquerdo */
+    z-index: 1000; /* Garante que a navbar fique acima de outros conteúdos */
+    display: flex; /* Usa flexbox para organizar os itens dentro da navbar */
+    justify-content: space-between; /* Logo à esquerda e links à direita */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 0 20px; /* Espaçamento nas laterais */
 }
 
+/* Estilo da logo (não clicável) */
+.Logo h1 {
+    color: #ffffff; /* Cor da logo */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold;
+    font-style: italic; /* Estilo itálico */
+    margin: 0; /* Remove a margem */
+    font-family: Poppins; /* Fonte Poppins */
+}
+
+/* Estilo do menu de navegação */
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
-    margin:0px; /* Remove a margem da lista */
-    padding: 0; /* Remove o preenchimento,em volta da lista */
-    display: flex; /* Flexbox para distribuição dos itens */
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Flexbox para distribuir os itens */
     justify-content: flex-end; /* Alinha os itens à direita */
     align-items: center; /* Alinha verticalmente os itens */
-    height: 0px; /* Faz a lista ocupar a altura da navbar */
-    
+    height: 100%; /* Faz a lista ocupar toda a altura da navbar */
 }
 
 nav ul li {
@@ -37,47 +54,30 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 20px 30px; /* Espaçamento interno dos links */
+    padding: 20px 30px; /* Espaçamento interno nos links */
     color: white; /* Cor do texto dos links */
-    text-align: center; /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto dentro dos links */
     text-decoration: none; /* Remove o sublinhado */
     word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif; /* Fonte para os links */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa os links em negrito */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
 }
 
 nav ul li a:hover {
-    text-decoration:rgb(0, 73, 156) underline; /* Cor ao passar o mouse nos links */
-    height: 10px;
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+    color: #004a9c; /* Altera a cor do link para azul ao passar o mouse */
 }
 
-.Logo{
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: bold;
-    font-style: italic;
-    height: 25px;
-    margin-left: 0px;
-    font-family: Poppins;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #033c79;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Título principal */
+/* Estilo do título da página */
 h1 {
     text-align: center;
-    color: #067c02;
-    margin-top: 90px;
+    color: #067c02; /* Cor verde */
+    margin-top: 90px; /* Espaço acima para não sobrepor a navbar */
 }
 
-/* Estilos das seções */
+/* Estilo das seções */
 section {
     background-color: #fff;
     border-radius: 8px;
@@ -86,89 +86,76 @@ section {
     padding: 15px;
 }
 
-/* Estilo da lista */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    padding: 5px 0;
-}
-
-/* Botões */
+/* Estilo dos botões de ação */
 .botoes-acao {
     text-align: center;
     margin-top: 20px;
 }
-.btn-confirmar {
-    background-color: #07a30f; /* Verde */
-    color: white;
+
+.btn-confirmar, .btn-voltar {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn-voltar {
-    background-color: rgb(223, 20, 20); /* Vermelho */
+.btn-confirmar {
+    background-color: #07a30f;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s;
 }
 
 .btn-confirmar:hover {
-    background-color: #357739; /* Verde mais escuro ao passar o mouse */
+    background-color: #357739;
+    transform: scale(1.05);
+}
+
+.btn-voltar {
+    background-color: rgb(223, 20, 20);
+    color: white;
 }
 
 .btn-voltar:hover {
-    background-color: rgb(167, 0, 0); /* Vermelho mais intenso ao passar o mouse */
+    background-color: rgb(167, 0, 0);
+    transform: scale(1.05);
 }
-
 
 /* Estilo do rodapé */
 footer {
     text-align: center;
     margin-top: 20px;
 }
+
 footer a {
     color: #333;
     text-decoration: none;
-    transition: color 0.3s; /* Suaviza a transição de cor */
+    transition: color 0.3s;
 }
 
 footer a:hover {
+    color: #4CAF50; /* Verde ao passar o mouse */
     text-decoration: underline;
-    color: #4CAF50; /* Cor ao passar o mouse */
 }
-
-footer a:active {
-    color: #FF6F61; /* Cor ao clicar */
-}
-
 
 /* Responsividade */
 @media (max-width: 600px) {
-    body {
-        padding: 10px;
+    nav {
+        flex-direction: column; /* Organiza os itens em uma coluna em telas pequenas */
+        align-items: center;
     }
 
-    .botoes-acao {
-        flex-direction: column;
+    nav ul {
+        flex-direction: column; /* Organiza os links em uma coluna */
+        gap: 10px;
+    }
+
+    .Logo h1 {
+        font-size: 24px; /* Reduz o tamanho da logo em telas pequenas */
     }
 
     .btn-confirmar, .btn-voltar {
-        margin: 5px 0;
-        width: 100%;
+        width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+        margin-bottom: 10px;
     }
 }
-
-
-
-
