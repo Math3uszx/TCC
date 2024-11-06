@@ -1,3 +1,67 @@
+/* Cabeçalho//NAV BAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #033c79;
+}
+
+nav {
+    background-color: #067c02; /* Cor de fundo da navbar */
+    height: 80px; /* Altura da navbar */
+    width: 100%; /* Largura total */
+    position: fixed; /* Fixa a navbar no topo */
+    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
+    top: 0px;
+    margin: 0px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin:0px; /* Remove a margem da lista */
+    padding: 0; /* Remove o preenchimento,em volta da lista */
+    display: flex; /* Flexbox para distribuição dos itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 0px; /* Faz a lista ocupar a altura da navbar */
+    
+}
+
+nav ul li {
+    margin: 0; /* Remove a margem dos itens da lista */
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px; /* Espaçamento interno dos links */
+    color: white; /* Cor do texto dos links */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration:rgb(0, 73, 156) underline; /* Cor ao passar o mouse nos links */
+    height: 10px;
+}
+
+.Logo{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    height: 25px;
+    margin-left: 0px;
+    font-family: Poppins;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #033c79;
@@ -10,7 +74,7 @@ body {
 h1 {
     text-align: center;
     color: #067c02;
-    
+    margin-top: 90px;
 }
 
 /* Estilos das seções */
@@ -104,3 +168,7 @@ footer a:active {
         width: 100%;
     }
 }
+
+
+
+
