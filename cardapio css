@@ -16,11 +16,13 @@ nav {
     background-color: #067c02; /* Cor de fundo da navbar */
     height: 80px; /* Altura da navbar */
     width: 100%; /* Largura total */
+    position: fixed; /* Fixa a navbar no topo */
+    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
 }
 
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
-    margin-right:150px; /* Remove a margem da lista */
+    margin:0px; /* Remove a margem da lista */
     padding: 0; /* Remove o preenchimento,em volta da lista */
     display: flex; /* Flexbox para distribuição dos itens */
     justify-content: flex-end; /* Alinha os itens à direita */
@@ -41,7 +43,7 @@ nav ul li a {
     text-decoration: none; /* Remove o sublinhado */
     word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
     font-family: 'Times New Roman', Times, serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -70,6 +72,7 @@ nav ul li a:hover {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
 
 .cards-container {
     display: flex; /* Utiliza o modelo Flexbox para o layout. */
@@ -165,22 +168,31 @@ input[type="checkbox"] {
     height: 20px; /* Ajusta a altura */
 }
 
-button.fazer-pedido {
-    background-color: #1a75d4; /* Cor de fundo do botão */
+
+
+.botao-acao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fazer-pedido {
+    background-color: #07a30f; /* Cor de fundo do botão */
     color: white; /* Cor do texto */
+    text-decoration: none;
     border: none; /* Remove a borda padrão */
     padding: 12px 20px; /* Espaçamento interno (vertical e horizontal) */
     font-size: 16px; /* Tamanho da fonte */
-    border-radius: 8px; /* Cantos arredondados */
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 6px; /* Cantos arredondados */
     cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.2s; /* Animações para hover */
 }
 
-button.fazer-pedido:hover {
-    background-color: greenyellow; /* Muda a cor de fundo ao passar o mouse */
+.fazer-pedido:hover {
+    background-color: rgb(3, 124, 3); /* Muda a cor de fundo ao passar o mouse */
     transform: scale(1.05); /* Aumenta o botão levemente */
 }
 
-button.fazer-pedido:active {
+.fazer-pedido:active {
     transform: scale(0.95); /* Diminui um pouco o botão ao clicar */
 }
