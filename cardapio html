@@ -12,15 +12,16 @@
     <nav>
         <img src="" alt="">
         <div class="Logo">    
-            <h1>Restaurante da Casa</h1>
+            <h1<a href="inicio">Restaurante da Casa</h1>
         </div>
         <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
+            <li onclick="ParagrafoInicio"><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
             <li><a href="#contato">Cardápio</a></li>
-            <li><a href="#serviços">Serviços</a></li>
         </ul>
     </nav>
+
+   <p id="ParagrafoInicio">teste</p>
 
     <div class="Titulos"> 
         <h2>Faça Seu Pedido</h2>
@@ -348,13 +349,15 @@
                         Adicionar ao Pedido
                     </label>
                 </div>
+            </form>
             </div>
      </div>
+    </div>
 
-    </form>
-
-    <input type="submit" value="Finalizar Pedido">
-
+    <div class="botao-acao">
+        <a href="pagConfirmar.html" class="fazer-pedido">Confirmar Pedido</a>
+    </div>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Seleciona todos os botões de adicionar ao pedido
@@ -368,7 +371,7 @@
                 });
             });
         });
-    
+
        function toggleOptions(optionsId, icon) {
     const optionsDiv = document.getElementById(optionsId);
     optionsDiv.classList.toggle('hidden');
@@ -379,7 +382,7 @@
     }
 }
 
-    
+
         function validateForm() {
             // Seleciona todos os checkboxes marcados
             const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
