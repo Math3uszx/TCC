@@ -7,9 +7,16 @@
 }
 
 
+/* Garantir que o conteúdo não seja sobreposto pela navbar fixa */
 body {
     font-family: Arial, sans-serif;
     background-color: #033c79;
+    padding-top: 80px; /* Ajuste a altura conforme a altura da navbar */
+}
+
+/* Caso queira aplicar no conteúdo diretamente abaixo da navbar (por exemplo, no <main> ou <section>) */
+main {
+    margin-top: 80px; /* Também pode ser margin-top se preferir */
 }
 
 nav {
@@ -17,6 +24,8 @@ nav {
     height: 80px; /* Altura da navbar */
     width: 100%; /* Largura total */
     position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Posiciona a navbar exatamente no topo */
+    left: 0; /* Garante que ela comece do lado esquerdo */
     z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
 }
 
@@ -95,7 +104,7 @@ nav ul li a:hover {
 }
 
 .toggle-icon {
-    font-size: 1.2em; /* Tamanho do ícone de alternância (seta). */
+    font-size: 1.0em; /* Tamanho do ícone de alternância (seta). */
     cursor: pointer; /* Muda o cursor para indicar que é clicável. */
     float: right; /* Alinha o ícone à direita da seção. */
     color: #555; /* Cor do ícone. */
@@ -158,7 +167,7 @@ label {
     font-family: 'Nunito', sans-serif; /* Aplica a fonte Nunito */
     font-size: 16px; /* Tamanho da fonte */
     color: #333; /* Cor do texto */
-    margin-bottom: 8px; /* Espaço abaixo do label */
+    margin-bottom: 2px; /* Espaço abaixo do label */
     display: block; /* Faz o label ocupar toda a largura disponível */
 }
 
@@ -195,4 +204,18 @@ input[type="checkbox"] {
 
 .fazer-pedido:active {
     transform: scale(0.95); /* Diminui um pouco o botão ao clicar */
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Exibe os cards em uma única coluna */
+    }
+
+    nav ul {
+        justify-content: center; /* Centraliza os itens na navbar em dispositivos móveis */
+    }
+
+    .Logo {
+        font-size: 22px; /* Ajusta o tamanho da logo */
+    }
 }
