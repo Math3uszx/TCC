@@ -3,27 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/pagConfirmarStyle.css">
+    <link rel="stylesheet" href="pagConfirmaStyle.css">
     <title>Confirmação do Pedido</title>
 </head>
 <body>
- <!-- Barra de navegação -->
- <nav>
-    <!-- Logo (não clicável) -->
-    <div class="Logo">
-        <h1>Restaurante da Casa</h1>  <!-- Logo sem link -->
-    </div>
-    
-    <!-- Links de navegação -->
-    <ul>
-        <li><a href="#home">Início</a></li>  <!-- Link para o Início -->
-        <li><a href="#sobre">Sobre Nós</a></li>  <!-- Link para Sobre Nós -->
-        <li><a href="#contato">Cardápio</a></li>  <!-- Link para Cardápio -->
-    </ul>
-</nav>
 
-<!-- Conteúdo principal -->
-<h1>Confirmação do Pedido</h1>
+    <h1>Confirmação do Pedido</h1>
+
 
   <section class="info-cliente">
         <h3>Informações do Cliente</h3>
@@ -41,23 +27,28 @@
         </ul>
     </section>
 
+  
     <section class="tempo-entrega">
         <h3>Tempo Estimado de Entrega</h3>
         <p>30 a 45 minutos</p>
     </section>
 
     <div class="botoes-acao">
-            <button id="btn-confirmar" class="btn-confirmar">confirmar Pedido</button>
-            <a href="index.html" class="btn-voltar">Voltar ao Cardápio</a>
+        <a href="" class="btn-confirmar">Confirmar Pedido</a>
+        <a href="index.html" class="btn-voltar">Voltar ao Cardápio</a>
     </div>
+    
 
     <script>
-    const buttonAlert = document.getElementById("btn-confirmar");
-    if (buttonAlert) {
-        buttonAlert.onclick = function() {
-            alert("Seu pedido foi Confirmado!");
+        // Função para Exibir que o pedido foi confirmado
+    const botaoDeAviso = document.querySelector(".btn-confirmar");
+    if (botaoDeAviso) {
+        botaoDeAviso.onclick = function() {
+            alert("Você confirmou seu pedido!! Agradecemos a sua preferência");
         };
     }
     </script>
+
+	
 </body>
 </html>
