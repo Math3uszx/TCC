@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pagConfirmaStyle.css">
+    <link rel="stylesheet" href="styles/pagConfirmarStyle.css">
     <title>Confirmação do Pedido</title>
 </head>
 <body>
+    <!-- Barra de navegação -->
+    <nav>
+        <div class="Logo">
+            <h1>Restaurante da Casa</h1>
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#contato">Cardápio</a></li>
+        </ul>
+    </nav>
 
+    <!-- Conteúdo principal -->
     <h1>Confirmação do Pedido</h1>
 
-
-  <section class="info-cliente">
+    <section class="info-cliente">
         <h3>Informações do Cliente</h3>
         <p><strong>Nome:</strong> João Mario</p>
         <p><strong>Endereço:</strong> Rua Exemplo, 123 - Bairro</p>
@@ -20,35 +31,57 @@
 
     <section class="resumo-pedido">
         <h3>Resumo do Pedido</h3>
-        <ul>
-            <li>Feijoada - 1 unidade - R$ 25,00</li>
-            <li>Suco de Limão - 2 unidades - R$ 10,00</li>
-            <li><strong>Total: R$ 35,00</strong></li>
+        <ul id="itens-pedido">
+            <!-- Os itens serão exibidos aqui -->
         </ul>
     </section>
 
-  
     <section class="tempo-entrega">
         <h3>Tempo Estimado de Entrega</h3>
         <p>30 a 45 minutos</p>
     </section>
 
     <div class="botoes-acao">
-        <a href="" class="btn-confirmar">Confirmar Pedido</a>
+        <button id="btn-confirmar" class="btn-confirmar">Confirmar Pedido</button>
         <a href="index.html" class="btn-voltar">Voltar ao Cardápio</a>
     </div>
-    
-
     <script>
-        // Função para Exibir que o pedido foi confirmado
-    const botaoDeAviso = document.querySelector(".btn-confirmar");
-    if (botaoDeAviso) {
-        botaoDeAviso.onclick = function() {
-            alert("Você confirmou seu pedido!! Agradecemos a sua preferência");
+        window.onload = function() {
+            // Recupera os itens do pedido do localStorage
+            const pedido = JSON.parse(localStorage.getItem('pedido')) || [];
+            const resumoPedido = document.getElementById('itens-pedido');
+            let total = 0;
+    
+            // Verifica se há itens no pedido
+            if (pedido.length > 0) {
+                pedido.forEach(function(item) {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+                    resumoPedido.appendChild(li);
+                    total += item.preco; // Soma o preço para calcular o total
+                });
+    
+                // Exibe o total
+                const totalLi = document.createElement('li');
+                totalLi.innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
+                resumoPedido.appendChild(totalLi);
+            } else {
+                resumoPedido.innerHTML = '<li>Você não selecionou nenhum item.</li>';
+            }
+    
+            // Função para confirmar o pedido e limpar o localStorage
+            const buttonAlert = document.getElementById("btn-confirmar");
+            if (buttonAlert) {
+                buttonAlert.onclick = function() {
+                    alert("Seu pedido foi confirmado!");
+                    // Limpa o pedido após confirmação
+                    localStorage.removeItem('pedido');
+                    // Redireciona para a página de confirmação final (ou outra página)
+                    window.location.href = 'pedido_confirmado.html';  // Substitua pela URL de confirmação real
+                };
+            }
         };
-    }
     </script>
-
-	
+    
 </body>
 </html>
