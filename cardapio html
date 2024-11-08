@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
@@ -26,10 +26,8 @@
     <div class="Titulos"> 
         <h2 id="cardapio">Faça Seu Pedido</h2>
     </div>
-
-   
-<!-- Bloco Tira-Gosto -->
-<div class="menu-section">
+ <!-- Bloco Tira-Gosto -->
+ <div class="menu-section">
     <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('tira-gosto-options', this)" aria-expanded="false"></i>
     <label>Tira-Gosto</label>
     <div id="tira-gosto-options" class="cards-container hidden">
@@ -39,7 +37,7 @@
                 <h1>Salada Verde</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Salada Verde - R$12,00">
+                    <input type="checkbox" name="produto[]" data-nome="Salada Verde" data-preco="12.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -50,7 +48,7 @@
                 <h1>Batatas Fritas</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Batatas Fritas - R$10,00">
+                    <input type="checkbox" name="produto[]" data-nome="Batatas Fritas" data-preco="10.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -61,7 +59,7 @@
                 <h1>Petiscos</h1>
                 <span>R$52,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Petiscos - R$52,00">
+                    <input type="checkbox" name="produto[]" data-nome="Petiscos" data-preco="52.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -72,7 +70,7 @@
                 <h1>Bolinho de Bacalhau</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Bolinho de Bacalhau - R$12,00">
+                    <input type="checkbox" name="produto[]" data-nome="Bolinho de Bacalhau" data-preco="12.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -80,9 +78,7 @@
     </div>
 </div>
 
-    </div>
-</div>
-       <!-- Bloco Pratos Principais -->
+<!-- Bloco Pratos Principais -->
 <div class="menu-section">
     <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('pratos-options', this)" aria-expanded="false"></i>
     <label>Pratos Principais</label>
@@ -93,7 +89,7 @@
                 <h1>Feijoada</h1>
                 <span>R$35,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Feijoada">
+                    <input type="checkbox" name="produto[]" data-nome="Feijoada" data-preco="35.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -104,7 +100,7 @@
                 <h1>Filé à Parmegiana</h1>
                 <span>R$40,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Filé à Parmegiana">
+                    <input type="checkbox" name="produto[]" data-nome="Filé à Parmegiana" data-preco="40.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -115,7 +111,7 @@
                 <h1>Moqueca de Peixe</h1>
                 <span>R$45,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Moqueca de Peixe">
+                    <input type="checkbox" name="produto[]" data-nome="Moqueca de Peixe" data-preco="45.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -126,7 +122,7 @@
                 <h1>Frango Assado com Ervas</h1>
                 <span>R$30,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Frango Assado com Ervas">
+                    <input type="checkbox" name="produto[]" data-nome="Frango Assado com Ervas" data-preco="30.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -137,41 +133,27 @@
                 <h1>Lasanha à Bolonhesa</h1>
                 <span>R$35,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Lasanha à Bolonhesa">
+                    <input type="checkbox" name="produto[]" data-nome="Lasanha à Bolonhesa" data-preco="35.00">
                     Adicionar Pedido
                 </label>
             </div>
         </div>
         <div class="card">
-            <img src="https://th.bing.com/th/id/OIP.4ELiRS7iXwio_CMW6JF8ggHaER?rs=1&pid=ImgDetMain" alt="Macorronada">
+            <img src="https://th.bing.com/th/id/OIP.4ELiRS7iXwio_CMW6JF8ggHaER?rs=1&pid=ImgDetMain" alt="Macarronada">
             <div class="card-content">
-                <h1>Macorronada</h1>
+                <h1>Macarronada</h1>
                 <span>R$28,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Macorronada">
-                    Adicionar Pedido
-                </label>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://th.bing.com/th/id/R.8fa46f0c6107f2cef48ba950bfe6ea21?rik=YA5wHn%2fYzAOcqw&riu=http%3a%2f%2fwww.saboresajinomoto.com.br%2fuploads%2fimages%2frecipes%2fescondidinho-com-carne-seca.jpg&ehk=VWqXTMQ69xWwU5s3%2fgB%2bM0T8OemEFxQP%2fHsS6HHGg7Y%3d&risl=&pid=ImgRaw&r=0" alt="Escondidinho de Carne Seca">
-            <div class="card-content">
-                <h1>Escondidinho de Carne Seca</h1>
-                <span>R$28,00</span>
-                <label>
-                    <input type="checkbox" name="produto" value="Escondidinho de Carne Seca">
+                    <input type="checkbox" name="produto[]" data-nome="Macarronada" data-preco="28.00">
                     Adicionar Pedido
                 </label>
             </div>
         </div>
     </div>
 </div>
-                            
-
-    
-        <!-- Bloco Sobremesas -->
-    <div class="menu-section">
-   <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('sobremesas-options', this)" aria-expanded="false"></i>
+<!-- Bloco Sobremesas -->
+<div class="menu-section">
+    <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('sobremesas-options', this)" aria-expanded="false"></i>
     <label>Sobremesas</label>
     <div id="sobremesas-options" class="cards-container hidden">
         <div class="card">
@@ -180,7 +162,7 @@
                 <h1>Brigadeiro</h1>
                 <span>R$5,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Brigadeiro">
+                    <input type="checkbox" name="produto[]" data-nome="Brigadeiro" data-preco="5.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -191,7 +173,7 @@
                 <h1>Petit Gateau</h1>
                 <span>R$18,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Petit Gateau">
+                    <input type="checkbox" name="produto[]" data-nome="Petit Gateau" data-preco="18.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -202,7 +184,7 @@
                 <h1>Pudim de Leite</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Pudim de Leite">
+                    <input type="checkbox" name="produto[]" data-nome="Pudim de Leite" data-preco="12.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -213,7 +195,7 @@
                 <h1>Mousse de Maracujá</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Mousse de Maracujá">
+                    <input type="checkbox" name="produto[]" data-nome="Mousse de Maracujá" data-preco="10.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -224,7 +206,7 @@
                 <h1>Torta de Morango</h1>
                 <span>R$15,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Torta de Morango">
+                    <input type="checkbox" name="produto[]" data-nome="Torta de Morango" data-preco="15.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -235,7 +217,132 @@
                 <h1>Bolo de Chocolate</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="produto" value="Bolo de Chocolate">
+                    <input type="checkbox" name="produto[]" data-nome="Bolo de Chocolate" data-preco="10.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+ <!-- Bloco Bebidas -->
+ <div class="menu-section">
+    <label>Bebidas</label>
+    <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('bebidas-options', this)" aria-expanded="false"></i>
+
+    <div id="bebidas-options" class="cards-container hidden">
+        <!-- Suco de Limão -->
+        <div class="card">
+            <img src="https://static.itdg.com.br/images/1200-675/7a00b46f2e78b220deb7c80ac5f8cb16/352517-original.jpg" alt="Suco de Limão">
+            <div class="card-content">
+                <h1>Suco de Limão</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Suco de Limão" data-preco="5.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Suco de Laranja -->
+        <div class="card">
+            <img src="https://agro.estadao.com.br/app/uploads/2024/03/suco-laranja-2.jpg" alt="Suco de Laranja">
+            <div class="card-content">
+                <h1>Suco de Laranja</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Suco de Laranja" data-preco="5.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Suco de Maracujá -->
+        <div class="card">
+            <img src="https://www.designi.com.br/images/preview/10136072.jpg" alt="Suco de Maracujá">
+            <div class="card-content">
+                <h1>Suco de Maracujá</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Suco de Maracujá" data-preco="5.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Suco de Goiaba -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmiz9fdwXRNWGFvaCwnp8FyCPlfChGrRdrLw&s" alt="Suco de Goiaba">
+            <div class="card-content">
+                <h1>Suco de Goiaba</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Suco de Goiaba" data-preco="5.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Suco de Manga -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-CXT0cubDW3YfjVeJoNN2Wf4JZgtuqPqWA&s" alt="Suco de Manga">
+            <div class="card-content">
+                <h1>Suco de Manga</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Suco de Manga" data-preco="5.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Cerveja -->
+        <div class="card">
+            <img src="https://valeonnoticias.com.br/wp-content/uploads/2023/07/CERVEJAS-1.png" alt="Cerveja">
+            <div class="card-content">
+                <h1>Cervejas</h1>
+                <span>R$10,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Cerveja" data-preco="10.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Whisky -->
+        <div class="card">
+            <img src="https://images.tcdn.com.br/img/img_prod/774261/whisky_jhonnie_walker_red_label_750ml_3667_1_c3a21748d4b12e9111d3ba1066f5a97f.jpg" alt="Whisky">
+            <div class="card-content">
+                <h1>Whisky (a dose)</h1>
+                <span>R$20,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Whisky" data-preco="20.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Água -->
+        <div class="card">
+            <img src="https://drogariamoderna.vtexassets.com/arquivos/ids/251997-800-auto?v=638151218022670000&width=800&height=auto&aspect=true" alt="Água">
+            <div class="card-content">
+                <h1>Água</h1>
+                <span>R$3,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Água" data-preco="3.00">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+
+        <!-- Café Expresso -->
+        <div class="card">
+            <img src="https://perfectdailygrind.com/pt/wp-content/uploads/sites/5/2020/03/Paul-Mordheweyk-1024x850.jpg" alt="Café expresso">
+            <div class="card-content">
+                <h1>Café expresso</h1>
+                <span>R$3,00</span>
+                <label>
+                    <input type="checkbox" name="produto[]" data-nome="Café expresso" data-preco="3.00">
                     Adicionar Pedido
                 </label>
             </div>
@@ -243,161 +350,57 @@
     </div>
 </div>
 
-      <!-- Bloco Bebidas -->
-      <div class="menu-section">
-        <label>Bebidas</label>
-        <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('bebidas-options', this)" aria-expanded="false"></i>
-    
-        <!-- Bloco de opções Bebidas com cards -->
-        <div id="bebidas-options" class="cards-container hidden">
-            <div class="card">
-                <img src="https://static.itdg.com.br/images/1200-675/7a00b46f2e78b220deb7c80ac5f8cb16/352517-original.jpg" alt="Suco de Limão">
-                <div class="card-content">
-                    <h1>Suco de Limão</h1>
-                    <span>R$5,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Suco de Limão">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://agro.estadao.com.br/app/uploads/2024/03/suco-laranja-2.jpg" alt="Suco de Laranja">
-                <div class="card-content">
-                    <h1>Suco de Laranja</h1>
-                    <span>R$5,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Suco de Laranja">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.designi.com.br/images/preview/10136072.jpg" alt="Suco de Maracujá">
-                <div class="card-content">
-                    <h1>Suco de Maracujá</h1>
-                    <span>R$5,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Suco de Maracujá">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://blog.biglar.com.br/wp-content/uploads/2023/01/delicioso-suco-de-goiaba-vermelha-lado-de-uma-fatia-de-goiaba-no-fundo-goiabas-e-folhas-em-madeira-rustica.jpg" alt="Suco de Goiaba">
-                <div class="card-content">
-                    <h1>Suco de Goiaba</h1>
-                    <span>R$5,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Suco de Goiaba">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-CXT0cubDW3YfjVeJoNN2Wf4JZgtuqPqWA&s" alt="Suco de Manga">
-                <div class="card-content">
-                    <h1>Suco de Manga</h1>
-                    <span>R$5,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Suco de Manga">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://valeonnoticias.com.br/wp-content/uploads/2023/07/CERVEJAS-1.png" alt="Cerveja">
-                <div class="card-content">
-                    <h1>Cervejas</h1>
-                    <span>R$10,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Cerveja">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.tcdn.com.br/img/img_prod/774261/whisky_jhonnie_walker_red_label_750ml_3667_1_c3a21748d4b12e9111d3ba1066f5a97f.jpg" alt="Whisky">
-                <div class="card-content">
-                    <h1>Whisky (a dose)</h1>
-                    <span>R$20,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Whisky">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://drogariamoderna.vtexassets.com/arquivos/ids/251997-800-auto?v=638151218022670000&width=800&height=auto&aspect=true" alt="Água">
-                <div class="card-content">
-                    <h1>Água</h1>
-                    <span>R$3,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Água">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://perfectdailygrind.com/pt/wp-content/uploads/sites/5/2020/03/Paul-Mordheweyk-1024x850.jpg" alt="Café expresso">
-                <div class="card-content">
-                    <h1>Café expresso</h1>
-                    <span>R$3,00</span>
-                    <label>
-                        <input type="checkbox" name="produto" value="Café expresso">
-                        Adicionar Pedido
-                    </label>
-                </div>
-            </div>
-     </div>
-     </div>
 
-     <div class="botao-acao">
-            <button class= "btn-pedido" onclick="salvarInformacoes()">Finalizar Pedido</button>
-        </div>
-
-    <script>
-
-                    function verificarCheckboxes() {
-                        var checkboxes = document.querySelectorAll('input[name="produto"]:checked');
-                        if (checkboxes.length > 0) {
-                            return true;
-                        }
-                        return false;
-                    }
-
-                        function salvarInformacoes() {
-            if (verificarCheckboxes()) {
-               alert('Acertou')
-            
-                
-            } else {
-                alert('Por favor, selecione pelo menos um produto.');
-            }}
-        
-
-        document.addEventListener("DOMContentLoaded", () => {
-            // Seleciona todos os botões de adicionar pedido
-            const addToOrderButtons = document.querySelectorAll(".add-to-order-btn");
-    
-            addToOrderButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    alert("Item adicionado pedido!");
-                   
-                   
-                });
-            });
-        });
-    
-       function toggleOptions(optionsId, icon) {
-    const optionsDiv = document.getElementById(optionsId);
-    optionsDiv.classList.toggle('hidden');
-    if (optionsDiv.classList.contains('hidden')) {
-        icon.setAttribute('aria-expanded', 'false');
-    } else {
-        icon.setAttribute('aria-expanded', 'true');
+ 
+<script>
+    // Função para verificar se pelo menos um checkbox foi selecionado
+    function verificarCheckboxes() {
+        // Seleciona todos os checkboxes com o nome "produto[]"
+        const checkboxesMarcados = document.querySelectorAll('input[name="produto[]"]:checked');
+        // Retorna true se houver algum checkbox marcado, false caso contrário
+        return checkboxesMarcados.length > 0;
     }
-}
-    </script>
+
+    // Função para salvar o pedido e redirecionar
+    function salvarPedido() {
+        // Verifica se pelo menos um checkbox foi marcado
+        if (verificarCheckboxes()) {
+            const checkboxes = document.querySelectorAll('input[name="produto[]"]:checked'); 
+            let pedido = [];
+
+            // Armazena os valores dos itens selecionados no pedido
+            checkboxes.forEach(function(checkbox) {
+                const item = {
+                    nome: checkbox.getAttribute('data-nome'),  // Nome do item armazenado no atributo 'data-nome'
+                    preco: parseFloat(checkbox.getAttribute('data-preco'))  // Preço armazenado no atributo 'data-preco'
+                };
+                pedido.push(item);
+            });
+
+            // Armazena o pedido no localStorage
+            localStorage.setItem('pedido', JSON.stringify(pedido));
+
+            // Redireciona para a página de confirmação
+            window.location.href = 'confirmação.html';
+        } else {
+            alert('Por favor, selecione pelo menos um produto!');
+        }
+    }
+
+    // Função para alternar a visibilidade das seções do menu
+    function toggleOptions(optionsId, icon) {
+        const optionsDiv = document.getElementById(optionsId);
+        optionsDiv.classList.toggle('hidden');
+        if (optionsDiv.classList.contains('hidden')) {
+            icon.setAttribute('aria-expanded', 'false');
+        } else {
+            icon.setAttribute('aria-expanded', 'true');
+        }
+    }
+</script>
+
+<div class="botao-acao">
+    <button class="btn-pedido" onclick="salvarPedido()">Finalizar Pedido</button>
+</div>
 </body>
 </html>
