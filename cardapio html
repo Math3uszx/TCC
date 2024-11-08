@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <img src="" alt="">
+   
+        <nav>
         <div class="Logo">    
-            <h1<a href="inicio">Restaurante da Casa</h1>
+            <h1 id="home">Restaurante da Casa</h1>
         </div>
         <ul>
-            <li onclick="ParagrafoInicio"><a href="#home">Início</a></li>
+            <li><a href="#home">Início</a></li>
             <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#contato">Cardápio</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#serviços">Serviços</a></li>
         </ul>
     </nav>
 
-
-    
     <div class="Titulos"> 
-        <h2>Faça Seu Pedido</h2>
+        <h2 id="cardapio">Faça Seu Pedido</h2>
     </div>
 
-    <form action="confirmação.html" method="post" onsubmit="return validateForm()">
-
+   
 <!-- Bloco Tira-Gosto -->
 <div class="menu-section">
     <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('tira-gosto-options', this)" aria-expanded="false"></i>
@@ -40,8 +39,8 @@
                 <h1>Salada Verde</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="pedido[]" value="Salada Verde - R$12,00">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Salada Verde - R$12,00">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -51,8 +50,8 @@
                 <h1>Batatas Fritas</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="pedido[]" value="Batatas Fritas - R$10,00">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Batatas Fritas - R$10,00">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -62,8 +61,8 @@
                 <h1>Petiscos</h1>
                 <span>R$52,00</span>
                 <label>
-                    <input type="checkbox" name="pedido[]" value="Petiscos - R$52,00">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Petiscos - R$52,00">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -73,8 +72,8 @@
                 <h1>Bolinho de Bacalhau</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="pedido[]" value="Bolinho de Bacalhau - R$12,00">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Bolinho de Bacalhau - R$12,00">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -94,8 +93,8 @@
                 <h1>Feijoada</h1>
                 <span>R$35,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Feijoada">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Feijoada">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -105,8 +104,8 @@
                 <h1>Filé à Parmegiana</h1>
                 <span>R$40,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Filé à Parmegiana">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Filé à Parmegiana">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -116,8 +115,8 @@
                 <h1>Moqueca de Peixe</h1>
                 <span>R$45,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Moqueca de Peixe">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Moqueca de Peixe">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -127,8 +126,8 @@
                 <h1>Frango Assado com Ervas</h1>
                 <span>R$30,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Frango Assado com Ervas">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Frango Assado com Ervas">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -138,8 +137,8 @@
                 <h1>Lasanha à Bolonhesa</h1>
                 <span>R$35,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Lasanha à Bolonhesa">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Lasanha à Bolonhesa">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -149,8 +148,8 @@
                 <h1>Macorronada</h1>
                 <span>R$28,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Macorronada">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Macorronada">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -160,8 +159,8 @@
                 <h1>Escondidinho de Carne Seca</h1>
                 <span>R$28,00</span>
                 <label>
-                    <input type="checkbox" name="prato[]" value="Escondidinho de Carne Seca">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Escondidinho de Carne Seca">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -181,8 +180,8 @@
                 <h1>Brigadeiro</h1>
                 <span>R$5,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Brigadeiro">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Brigadeiro">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -192,8 +191,8 @@
                 <h1>Petit Gateau</h1>
                 <span>R$18,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Petit Gateau">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Petit Gateau">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -203,8 +202,8 @@
                 <h1>Pudim de Leite</h1>
                 <span>R$12,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Pudim de Leite">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Pudim de Leite">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -214,8 +213,8 @@
                 <h1>Mousse de Maracujá</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Mousse de Maracujá">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Mousse de Maracujá">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -225,8 +224,8 @@
                 <h1>Torta de Morango</h1>
                 <span>R$15,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Torta de Morango">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Torta de Morango">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -236,8 +235,8 @@
                 <h1>Bolo de Chocolate</h1>
                 <span>R$10,00</span>
                 <label>
-                    <input type="checkbox" name="sobremesa[]" value="Bolo de Chocolate">
-                    Adicionar ao Pedido
+                    <input type="checkbox" name="produto" value="Bolo de Chocolate">
+                    Adicionar Pedido
                 </label>
             </div>
         </div>
@@ -257,8 +256,8 @@
                     <h1>Suco de Limão</h1>
                     <span>R$5,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Suco de Limão">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Suco de Limão">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -268,8 +267,8 @@
                     <h1>Suco de Laranja</h1>
                     <span>R$5,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Suco de Laranja">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Suco de Laranja">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -279,19 +278,19 @@
                     <h1>Suco de Maracujá</h1>
                     <span>R$5,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Suco de Maracujá">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Suco de Maracujá">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
             <div class="card">
-                <img src="https://blog.biglar.com.br/wp-content/uploads/2023/01/delicioso-suco-de-goiaba-vermelha-ao-lado-de-uma-fatia-de-goiaba-no-fundo-goiabas-e-folhas-em-madeira-rustica.jpg" alt="Suco de Goiaba">
+                <img src="https://blog.biglar.com.br/wp-content/uploads/2023/01/delicioso-suco-de-goiaba-vermelha-lado-de-uma-fatia-de-goiaba-no-fundo-goiabas-e-folhas-em-madeira-rustica.jpg" alt="Suco de Goiaba">
                 <div class="card-content">
                     <h1>Suco de Goiaba</h1>
                     <span>R$5,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Suco de Goiaba">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Suco de Goiaba">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -301,8 +300,8 @@
                     <h1>Suco de Manga</h1>
                     <span>R$5,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Suco de Manga">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Suco de Manga">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -312,8 +311,8 @@
                     <h1>Cervejas</h1>
                     <span>R$10,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Cerveja">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Cerveja">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -323,8 +322,8 @@
                     <h1>Whisky (a dose)</h1>
                     <span>R$20,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Whisky">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Whisky">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -334,8 +333,8 @@
                     <h1>Água</h1>
                     <span>R$3,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Água">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Água">
+                        Adicionar Pedido
                     </label>
                 </div>
             </div>
@@ -345,33 +344,51 @@
                     <h1>Café expresso</h1>
                     <span>R$3,00</span>
                     <label>
-                        <input type="checkbox" name="bebida[]" value="Café expresso">
-                        Adicionar ao Pedido
+                        <input type="checkbox" name="produto" value="Café expresso">
+                        Adicionar Pedido
                     </label>
                 </div>
-            </form>
             </div>
      </div>
-    </div>
+     </div>
 
-    <div class="botao-acao">
-        <a href="pagConfirmar.html" class="fazer-pedido">Confirmar Pedido</a>
-    </div>
-    
+     <div class="botao-acao">
+            <button class= "btn-pedido" onclick="salvarInformacoes()">Finalizar Pedido</button>
+        </div>
+
     <script>
+
+                    function verificarCheckboxes() {
+                        var checkboxes = document.querySelectorAll('input[name="produto"]:checked');
+                        if (checkboxes.length > 0) {
+                            return true;
+                        }
+                        return false;
+                    }
+
+                        function salvarInformacoes() {
+            if (verificarCheckboxes()) {
+               alert('Acertou')
+            
+                
+            } else {
+                alert('Por favor, selecione pelo menos um produto.');
+            }}
+        
+
         document.addEventListener("DOMContentLoaded", () => {
-            // Seleciona todos os botões de adicionar ao pedido
+            // Seleciona todos os botões de adicionar pedido
             const addToOrderButtons = document.querySelectorAll(".add-to-order-btn");
     
             addToOrderButtons.forEach(button => {
                 button.addEventListener("click", () => {
-                    alert("Item adicionado ao pedido!");
-                    // Aqui você pode adicionar o item ao pedido do usuário
-                    // Exemplo: adicionar ao carrinho ou salvar em uma variável
+                    alert("Item adicionado pedido!");
+                   
+                   
                 });
             });
         });
-
+    
        function toggleOptions(optionsId, icon) {
     const optionsDiv = document.getElementById(optionsId);
     optionsDiv.classList.toggle('hidden');
@@ -381,21 +398,6 @@
         icon.setAttribute('aria-expanded', 'true');
     }
 }
-
-
-        function validateForm() {
-            // Seleciona todos os checkboxes marcados
-            const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
-            
-            // Verifica se algum checkbox foi marcado
-            if (checkedItems.length === 0) {
-                alert("Por favor, selecione pelo menos um item para fazer o pedido.");
-                return false;
-            }
-            return true;
-        }
     </script>
-    
-    
 </body>
 </html>
