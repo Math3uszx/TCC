@@ -6,28 +6,23 @@
     box-sizing: border-box;
 }
 
-
-/* Garantir que o conteúdo não seja sobreposto pela navbar fixa */
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #033c79;
-    padding-top: 80px; /* Ajuste a altura conforme a altura da navbar */
-}
-
-/* Caso queira aplicar no conteúdo diretamente abaixo da navbar (por exemplo, no <main> ou <section>) */
-main {
-    margin-top: 80px; /* Também pode ser margin-top se preferir */
 }
 
 nav {
     background-color: #067c02; /* Cor de fundo da navbar */
     height: 80px; /* Altura da navbar */
     width: 100%; /* Largura total */
-    position: fixed; /* Fixa a navbar no topo */
-    top: 0; /* Posiciona a navbar exatamente no topo */
-    left: 0; /* Garante que ela comece do lado esquerdo */
-    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
+    z-index: 1000;
+    position: fixed;
+    top: 0%;
 }
+
 
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
@@ -66,7 +61,7 @@ nav ul li a:hover {
     font-size: 28px;
     font-weight: bold;
     font-style: italic;
-    height: 25px;
+    height: 30px;
     margin-left: 20px;
     font-family: Poppins;
    
@@ -78,10 +73,9 @@ nav ul li a:hover {
     font-weight: bold;
     font-style: italic;
     margin-left:25px;
-    margin-top: 30px;
+    margin-top: 90px;
     margin-bottom: 20px;
 }
-
 
 .cards-container {
     display: flex; /* Utiliza o modelo Flexbox para o layout. */
@@ -104,7 +98,7 @@ nav ul li a:hover {
 }
 
 .toggle-icon {
-    font-size: 1.0em; /* Tamanho do ícone de alternância (seta). */
+    font-size: 1.2em; /* Tamanho do ícone de alternância (seta). */
     cursor: pointer; /* Muda o cursor para indicar que é clicável. */
     float: right; /* Alinha o ícone à direita da seção. */
     color: #555; /* Cor do ícone. */
@@ -165,9 +159,10 @@ nav ul li a:hover {
 
 label {
     font-family: 'Nunito', sans-serif; /* Aplica a fonte Nunito */
+    font-weight: bold;
     font-size: 16px; /* Tamanho da fonte */
     color: #333; /* Cor do texto */
-    margin-bottom: 2px; /* Espaço abaixo do label */
+    margin-bottom: 8px; /* Espaço abaixo do label */
     display: block; /* Faz o label ocupar toda a largura disponível */
 }
 
@@ -177,45 +172,28 @@ input[type="checkbox"] {
     height: 20px; /* Ajusta a altura */
 }
 
-
-
-.botao-acao {
+.botao-acao{
+    
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.fazer-pedido {
-    background-color: #07a30f; /* Cor de fundo do botão */
+.btn-pedido {
+    border: none;
     color: white; /* Cor do texto */
-    text-decoration: none;
-    border: none; /* Remove a borda padrão */
     padding: 12px 20px; /* Espaçamento interno (vertical e horizontal) */
+    background-color: #067c02;
     font-size: 16px; /* Tamanho da fonte */
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 6px; /* Cantos arredondados */
+    border-radius: 8px; /* Cantos arredondados */
     cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
     transition: background-color 0.3s, transform 0.2s; /* Animações para hover */
 }
 
-.fazer-pedido:hover {
-    background-color: rgb(3, 124, 3); /* Muda a cor de fundo ao passar o mouse */
+.btn-pedido:hover {
+    background-color: rgb(21, 99, 21); /* Muda a cor de fundo ao passar o mouse */
     transform: scale(1.05); /* Aumenta o botão levemente */
 }
 
-.fazer-pedido:active {
+.btn-pedido:active {
     transform: scale(0.95); /* Diminui um pouco o botão ao clicar */
-}
-
-@media (max-width: 600px) {
-    .cards-container {
-        grid-template-columns: 1fr; /* Exibe os cards em uma única coluna */
-    }
-
-    nav ul {
-        justify-content: center; /* Centraliza os itens na navbar em dispositivos móveis */
-    }
-
-    .Logo {
-        font-size: 22px; /* Ajusta o tamanho da logo */
-    }
 }
